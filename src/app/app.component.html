@@ -1,19 +1,2 @@
-<p-card header="Please Sign In" [style]="{width: '360px', margin: '50px auto'}" styleClass="p-card-shadow">
-  <!-- Body Content -->
-  <span class="p-float-label">
-    <input id="float-input" type="text" [style]="{width: '100%'}" pInputText> 
-    <label for="float-input">Username</label>
-  </span>
+<router-outlet></router-outlet>
 
-  <br>
-  <br>
-
-  <span class="p-float-label">
-    <input id="float-input" type="password" [style]="{width: '100%'}"  pPassword />
-    <label for="float-input">Password</label>
-  </span>
-
-  <ng-template pTemplate="footer">
-      <p-button label="Login" [style]="{width: '100%'}"></p-button>
-  </ng-template>
-</p-card>

@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {Card, CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import {PasswordModule} from 'primeng/password';
+import { FormsModule } from '@angular/forms';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
@@ -18,7 +23,10 @@ import {PasswordModule} from 'primeng/password';
     CardModule,
     ButtonModule,
     InputTextModule,
-    PasswordModule
+    PasswordModule,
+    FormsModule,
+    MessageModule,
+    MessagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
