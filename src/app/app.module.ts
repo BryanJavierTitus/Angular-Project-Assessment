@@ -10,6 +10,7 @@ import {PasswordModule} from 'primeng/password';
 import { FormsModule } from '@angular/forms';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
+import {MenubarModule} from 'primeng/menubar';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {MessageModule} from 'primeng/message';
     PasswordModule,
     FormsModule,
     MessageModule,
-    MessagesModule
+    MessagesModule,
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+.menubar-items li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.menubar-items li a{
+    text-decoration: none;
+    color: black;
+}
