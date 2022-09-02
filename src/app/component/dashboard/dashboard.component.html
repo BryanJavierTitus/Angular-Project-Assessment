@@ -1,10 +1,72 @@
-<p-menubar>
-    <ng-template pTemplate="start">
-        <ul class="menubar-items">
-            <li><h2>Dev Test</h2></li>
-            <li><a href="">Insert Page</a></li>
-            <li><a href="">Update Page</a></li>
-            <li class="last"><a href="">Logout</a></li>
-        </ul>
-    </ng-template>
-</p-menubar>
+<link rel="stylesheet" href="https://unpkg.com/primeflex@3.1.2/primeflex.css">
+<link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">
+
+<app-menubar></app-menubar>
+<div class="grid">
+    <div class="col-fixed " style="width:220px; background-color: #f8f9fa; margin-top: 8px;">
+        <h2>Lead Information</h2>
+
+        <label for="firstname"><h3>First Name</h3></label>
+        <input type="text" id="firstname" style="width: 100%;" pInputText />
+
+        <label for="lastname"><h3>Last Name</h3></label>
+        <input type="text" id="lastname" style="width: 100%;" pInputText />
+
+        <label for="country"><h3>Country</h3></label>
+        <input type="text" id="country" style="width: 100%;" pInputText />
+
+        <label for="nationality"><h3>Nationality</h3></label>
+        <input type="text" id="nationality" style="width: 100%;" pInputText />
+
+        <label for="designation"><h3>Designation</h3></label>
+        <input type="text" id="designation" style="width: 100%;" pInputText />
+
+        <label for="work-exp"><h3>Work Experience</h3></label>
+        <input type="text" id="work-exp" style="width: 100%;" pInputText />
+
+        <label for="cv"><h3>CV</h3></label>
+        <p-fileUpload #fubauto mode="basic" name="demo[]" url="./upload.php" accept="image/*" [auto]="true" chooseLabel="Choose File" id="cv"></p-fileUpload>
+        
+        <label for="Data Source"><h3>Data Source</h3></label>
+        <p-dropdown [options]="socials" [(ngModel)]="selectedSocial" optionLabel="name"></p-dropdown>
+
+        <br>
+        <br>
+        <button pButton type="button" label="Insert"></button>
+        <button pButton pRipple type="button" label="Clear" class="p-button-danger"></button>
+        
+    </div>
+    <div class="col">
+        <h1>Welcome, {{username | titlecase}}</h1>
+        <p-table [value]="users" styleClass="p-datatable-gridlines">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Country</th>
+                    <th>Nationality</th>
+                    <th>Company</th>
+                    <th>Designation</th>
+                    <th>Work Exp</th>
+                    <th>CV</th>
+                    <th>Data Source</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-user>
+                <tr>
+                    <td>{{ user.firstName }}</td>
+                    <td>{{ user.lastName }}</td>
+                    <td>{{ user.country }}</td>
+                    <td>{{ user.nationality }}</td>
+                    <td>{{ user.company }}</td>
+                    <td>{{ user.designation }}</td>
+                    <td>{{ user.workExp }}</td>
+                    <td>{{ user.cv }}</td>
+                    <td>{{ user.dataSource }}</td>
+                </tr>
+            </ng-template>
+          </p-table>
+          
+    
+    </div>
+</div>

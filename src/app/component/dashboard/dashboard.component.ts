@@ -1,42 +1,42 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { Component, OnInit, Input } from '@angular/core';
+import { User } from 'src/app/user-services/User';
+import { UserService } from 'src/app/user-services/user.service';
+import { LoginComponent } from '../login/login.component';
+import { CookieService } from 'ngx-cookie-service';
+
+interface Socials {
+    name: string,
+    code: string
+}
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
+
 export class DashboardComponent implements OnInit {
+    username: string;
+    socials: Socials[];
+    selectedSocial: Socials | undefined;
 
-  constructor() { }
+    users: User[];
 
-  items: MenuItem[] | undefined;
+    login: LoginComponent;
+    
+    constructor(private userService: UserService, private cookieValue: CookieService) { 
+        this.socials = [
+            {name: 'Facebook', code: 'FB'},
+            {name: 'Twitter', code: 'TW'},
+            {name: 'Instagram', code: 'IG'},
+            {name: 'LinkedIn', code: 'LI'}
+        ];
+    }
 
-  ngOnInit() {
-      this.items = [
-          {
-              label: 'File',
-              items: [{
-                      label: 'New', 
-                      icon: 'pi pi-fw pi-plus',
-                      items: [
-                          {label: 'Project'},
-                          {label: 'Other'},
-                      ]
-                  },
-                  {label: 'Open'},
-                  {label: 'Quit'}
-              ]
-          },
-          {
-              label: 'Edit',
-              icon: 'pi pi-fw pi-pencil',
-              items: [
-                  {label: 'Delete', icon: 'pi pi-fw pi-trash'},
-                  {label: 'Refresh', icon: 'pi pi-fw pi-refresh'}
-              ]
-          }
-      ];
-  }
+    ngOnInit() {
+        this.userService.getUsers().then(data => (this.users = data));
+        this.username = this.cookieValue.get('username');
+    }
+
 
 }
