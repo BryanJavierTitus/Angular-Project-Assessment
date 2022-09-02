@@ -8,7 +8,9 @@
       "designation": "Software Engineer",
       "workExp": 8,
       "cv": "",
-      "dataSource": "Facebook"
+      "dataSource": "Facebook",
+      "username": "brendenWagner",
+      "password": "admin"
     },
     {
       "firstName": "Cara",
@@ -19,7 +21,9 @@
       "designation": "Sales Assistant",
       "workExp": 5,
       "cv": "",
-      "dataSource": "Google"
+      "dataSource": "Google",
+      "username": "caraStevens",
+      "password": "admin"
     },
     {
       "firstName": "Cedric",
@@ -30,7 +34,9 @@
       "designation": "Senior Javascript Developer",
       "workExp": 7,
       "cv": "",
-      "dataSource": "Monster Gulf"
+      "dataSource": "Monster Gulf",
+      "username": "cedricKelly",
+      "password": "admin"
     },
     {
       "firstName": "Doris",
@@ -41,7 +47,9 @@
       "designation": "Support Engineer",
       "workExp": 3,
       "cv": "",
-      "dataSource": "JobsDB"
+      "dataSource": "JobsDB",
+      "username": "dorisWilder",
+      "password": "admin"
     },
     {
       "firstName": "Jenny",
@@ -52,6 +60,8 @@
       "designation": "Regional Director",
       "workExp": 15,
       "cv": "",
-      "dataSource": "Twitter"
+      "dataSource": "Twitter",
+      "username": "jennyChang",
+      "password": "admin"
     }
   ]
