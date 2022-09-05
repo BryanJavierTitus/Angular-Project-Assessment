@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">
 
 <app-menubar></app-menubar>
-<div class="grid">
-    <div class="col-fixed " style="width:220px; background-color: #f8f9fa; margin-top: 8px;">
-        <h2>Lead Information</h2>
+
+<p-sidebar [(visible)]="display">
+    <h2>Lead Information</h2>
 
         <label for="firstname"><h3>First Name</h3></label>
         <input type="text" id="firstname" style="width: 100%;" pInputText />
@@ -32,15 +32,17 @@
 
         <br>
         <br>
-        <button pButton type="button" label="Insert"></button>
-        <button pButton pRipple type="button" label="Clear" class="p-button-danger"></button>
-        
-    </div>
+        <button pButton type="button" label="Insert" class="button"></button>
+        <button pButton pRipple type="button" label="Clear" class="p-button-danger button"></button>
+</p-sidebar>
+
+<div class="grid">
     <div class="col">
         <h1>Welcome, {{username | titlecase}}</h1>
         <p-table [value]="users" styleClass="p-datatable-gridlines">
             <ng-template pTemplate="header">
                 <tr>
+                    <th></th>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Country</th>
@@ -54,6 +56,7 @@
             </ng-template>
             <ng-template pTemplate="body" let-user>
                 <tr>
+                    <td><p-button type="text" (click)="display = true" icon="pi pi-pencil"></p-button></td>
                     <td>{{ user.firstName }}</td>
                     <td>{{ user.lastName }}</td>
                     <td>{{ user.country }}</td>

@@ -20,12 +20,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TableModule} from 'primeng/table';
 import { UserService } from './user-services/user.service';
 import { CookieService } from 'ngx-cookie-service';
+import { SidebarComponent } from './component/sidebar/sidebar.component';
+import {SidebarModule} from 'primeng/sidebar';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    MenubarComponent
+    MenubarComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { CookieService } from 'ngx-cookie-service';
     DropdownModule,
     BrowserAnimationsModule,
     TableModule,
+    SidebarModule
   ],
   providers: [UserService,CookieService],
   bootstrap: [AppComponent]

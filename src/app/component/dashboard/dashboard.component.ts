@@ -16,15 +16,14 @@ interface Socials {
 })
 
 export class DashboardComponent implements OnInit {
-    username: string;
     socials: Socials[];
     selectedSocial: Socials | undefined;
-
+    username: string;
     users: User[];
-
     login: LoginComponent;
-    
-    constructor(private userService: UserService, private cookieValue: CookieService) { 
+    display!: boolean;
+
+    constructor(private userService: UserService, private cookieValue: CookieService,) { 
         this.socials = [
             {name: 'Facebook', code: 'FB'},
             {name: 'Twitter', code: 'TW'},
