@@ -14,7 +14,7 @@ export interface User {
   designation: string;
   workExp: number;
   cv: string;
-  dataSource: DataSource;
+  dataSource: DataSource | string;
   username: string;
   password: string;
 }

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {Card, CardModule} from 'primeng/card';
+import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import {PasswordModule} from 'primeng/password';
@@ -22,6 +22,7 @@ import { UserService } from './user-services/user.service';
 import { CookieService } from 'ngx-cookie-service';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import {SidebarModule} from 'primeng/sidebar';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import {SidebarModule} from 'primeng/sidebar';
     TableModule,
     SidebarModule
   ],
-  providers: [UserService,CookieService],
+  providers: [UserService,CookieService,MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

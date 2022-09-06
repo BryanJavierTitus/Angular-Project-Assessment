@@ -10,4 +10,7 @@ export class UserService {
   getUsers() {
     return this.http.get<any>('assets/users.json').toPromise().then(res => <User[]>res).then(data => { return data; });
   }
+
+  
+  
 }

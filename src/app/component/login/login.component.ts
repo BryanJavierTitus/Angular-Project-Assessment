@@ -11,11 +11,10 @@ import { UserService } from 'src/app/user-services/user.service';
 })
 export class LoginComponent implements OnInit {
   username: string;
-  password: String | undefined;
-  firstName: String;
-  lastName: String;
-  error: String | undefined;
-
+  password: string | undefined;
+  firstName: string;
+  lastName: string;
+  error: string | undefined;
   users: User[]
 
   constructor(private router:Router, private cookieService: CookieService, private userService: UserService){}
