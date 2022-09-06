@@ -17,6 +17,9 @@
         <label for="nationality"><h3>Nationality</h3></label>
         <input type="text" id="nationality" [(ngModel)]="user.nationality" style="width: 100%;" pInputText />
 
+        <label for="nationality"><h3>Company</h3></label>
+        <input type="text" id="company" [(ngModel)]="user.company" style="width: 100%;" pInputText />
+
         <label for="designation"><h3>Designation</h3></label>
         <input type="text" id="designation" [(ngModel)]="user.designation" style="width: 100%;" pInputText />
 
@@ -31,12 +34,12 @@
 
         <br>
         <br>
-        <button pButton type="button" label="Close" (click)="updateUser()" class="p-button-danger"></button>
+        <button pButton type="button" label="Close" (click)="close()" class="p-button-danger"></button>
 </p-sidebar>
 
 <div class="grid">
     <div class="col">
-        <h1>Welcome, {{username | titlecase}}</h1>
+        <h1>Welcome, {{ adminUser }}</h1>
         <p-table [value]="users" styleClass="p-datatable-gridlines">
             <ng-template pTemplate="header">
                 <tr>
@@ -62,7 +65,7 @@
                     <td>{{ user.company }}</td>
                     <td>{{ user.designation }}</td>
                     <td>{{ user.workExp }}</td>
-                    <td>{{ user.cv }}</td>
+                    <td><a href="https://drive.google.com/file/d/1-w95Pxy5UMqqH0miHd_V9bIyMDp6OvJQ/view?usp=sharing" target="_blank">View</a></td>
                     <td>{{ user.dataSource }}</td>
                 </tr>
             </ng-template>

@@ -24,6 +24,7 @@ export class DashboardComponent implements OnInit {
     users!: User[];
     user!: User;
     item: string;
+    adminUser: string;
     message: any;
     login: LoginComponent;
     display: boolean;
@@ -35,25 +36,15 @@ export class DashboardComponent implements OnInit {
             {name: 'Instagram', code: 'IG'},
             {name: 'LinkedIn', code: 'LI'}
         ];
-        
-        // this.user = {
-        //     firstName: '',
-        //     lastName: '',
-        //     country: '',
-        //     nationality: '',
-        //     company: '',
-        //     designation: '',
-        //     workExp: 0,
-        //     cv: '',
-        //     dataSource: '',
-        //     username: '',
-        //     password: ''
-        //   }
     }
 
     ngOnInit() {
-        this.userService.getUsers().then(data => (this.users = data));
-        this.username = this.cookieValue.get('username');
+        this.userService.getUsers().then(data => {
+            this.users = data;
+            this.username = this.cookieValue.get('username');
+            const user =  <User>this.users.find(u => u.username === this.username);
+            this.adminUser = `${user.firstName} ${user.lastName}`;
+        });
     }
 
     onSubmit(){
@@ -72,8 +63,7 @@ export class DashboardComponent implements OnInit {
         }
     }
 
-    updateUser(){
-        this.users[this.users.findIndex(u => u.lastName === this.user.lastName)] = this.user;
+    close(){
         this.display = false;
     }
 

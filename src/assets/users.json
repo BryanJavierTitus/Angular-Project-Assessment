@@ -1,7 +1,7 @@
 [
     {
-      "firstName": "Brenden",
-      "lastName": "Wagner",
+      "firstName": "Paolo",
+      "lastName": "Santos",
       "country": "United States of America, California",
       "nationality": "American",
       "company": "Facebook",
@@ -9,12 +9,12 @@
       "workExp": 8,
       "cv": "",
       "dataSource": "Facebook",
-      "username": "brendenWagner",
+      "username": "paoloSantos",
       "password": "admin"
     },
     {
-      "firstName": "Cara",
-      "lastName": "Stevens",
+      "firstName": "Bryan",
+      "lastName": "Javier",
       "country": "United States of America, New york",
       "nationality": "American",
       "company": "Walmart",
@@ -22,12 +22,12 @@
       "workExp": 5,
       "cv": "",
       "dataSource": "Google",
-      "username": "caraStevens",
+      "username": "bryanJavier",
       "password": "admin"
     },
     {
-      "firstName": "Cedric",
-      "lastName": "Kelly",
+      "firstName": "Rj",
+      "lastName": "Jalosjos",
       "country": "Scotland, Glasgow City",
       "nationality": "Scottish",
       "company": "Data Tech",
@@ -35,12 +35,12 @@
       "workExp": 7,
       "cv": "",
       "dataSource": "Monster Gulf",
-      "username": "cedricKelly",
+      "username": "rjJalosjos",
       "password": "admin"
     },
     {
-      "firstName": "Doris",
-      "lastName": "Wilder",
+      "firstName": "Jade",
+      "lastName": "Corpuz",
       "country": "Australia, Queensland",
       "nationality": "Australian",
       "company": "Telstra",
@@ -48,20 +48,7 @@
       "workExp": 3,
       "cv": "",
       "dataSource": "JobsDB",
-      "username": "dorisWilder",
-      "password": "admin"
-    },
-    {
-      "firstName": "Jenny",
-      "lastName": "Chang",
-      "country": "Singapore, Singapore",
-      "nationality": "Chinese",
-      "company": "Singapore Airlines",
-      "designation": "Regional Director",
-      "workExp": 15,
-      "cv": "",
-      "dataSource": "Twitter",
-      "username": "jennyChang",
+      "username": "jadeCorpuz",
       "password": "admin"
     }
   ]

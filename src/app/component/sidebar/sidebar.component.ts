@@ -1,8 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 import { User } from 'src/app/user-services/User';
 import { UserService } from 'src/app/user-services/user.service';
-import { UserProfile } from 'src/app/userprofile';
-import { DashboardComponent } from '../dashboard/dashboard.component';
 
 interface Socials{
   name: string;
