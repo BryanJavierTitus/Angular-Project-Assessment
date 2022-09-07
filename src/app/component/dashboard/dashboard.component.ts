@@ -17,15 +17,17 @@ interface Socials {
 })
 
 export class DashboardComponent implements OnInit {
+    // socials dropdown variables
     socials: Socials[];
-    selectedSocial: Socials | undefined;
+    selectedSocial: Socials;
+
+    // admin dashboard variables
     username: string;
     users!: User[];
     user!: User;
-    item: string;
     adminUser: string;
-    message: any;
-    login: LoginComponent;
+
+    // required sidebar variable
     display: boolean;
 
     constructor(private userService: UserService, private cookieValue: CookieService,) { 
@@ -46,10 +48,6 @@ export class DashboardComponent implements OnInit {
         });
     }
 
-    onSubmit(){
-        this.item = 'hello'
-    }
-
     receiveEvent(data: any){
         this.users.push(data);
     }
@@ -65,6 +63,4 @@ export class DashboardComponent implements OnInit {
     close(){
         this.display = false;
     }
-
-
 }

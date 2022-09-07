@@ -37,8 +37,6 @@ export class SidebarComponent implements OnInit {
       {name: 'Instagram', code: 'IG'},
       {name: 'LinkedIn', code: 'LI'}
     ];
-
-    
   }
 
   ngOnInit(): void {}

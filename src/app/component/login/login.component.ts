@@ -10,13 +10,10 @@ import { UserService } from 'src/app/user-services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  // login page variables
   username: string;
-  password: string | undefined;
-  firstName: string;
-  lastName: string;
-  error: string | undefined;
-  cardStyle: string;
-  users: User[]
+  password: string;
+  users: User[];
 
   constructor(private router:Router, private cookieService: CookieService, private userService: UserService){}
 
