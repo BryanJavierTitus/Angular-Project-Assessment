@@ -52,8 +52,8 @@ export class DashboardComponent implements OnInit {
         this.users.push(data);
     }
 
-    getUser(lastName: string){
-        const user = this.users.find(u => u.lastName === lastName);
+    getUser(username: string){
+        const user = this.users.find(u => u.username === username);
         if (user) {
             this.user = user;
             this.display = true;

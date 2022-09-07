@@ -57,7 +57,7 @@
             </ng-template>
             <ng-template pTemplate="body" let-user>
                 <tr>
-                    <td><p-button type="text" (click)="getUser(user.lastName)" icon="pi pi-pencil"></p-button></td>
+                    <td><p-button type="text" (click)="getUser(user.username)" icon="pi pi-pencil"></p-button></td>
                     <td>{{ user.firstName }}</td>
                     <td>{{ user.lastName }}</td>
                     <td>{{ user.country }}</td>
