@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
     this.users.forEach(element => {
       if(this.username == element.username){
         if(this.password == element.password){
+          localStorage.setItem('token','userLoggedIn');
           this.cookieService.set('username', this.username);
           this.router.navigateByUrl('/dashboard');
         }

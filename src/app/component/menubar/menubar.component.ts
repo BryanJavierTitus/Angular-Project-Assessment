@@ -17,6 +17,7 @@ export class MenubarComponent implements OnInit {
 
   logout(){
     this.router.navigateByUrl("/");
+    localStorage.setItem('token','');
   }
 
   receive(data: any){
