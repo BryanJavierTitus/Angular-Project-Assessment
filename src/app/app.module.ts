@@ -23,6 +23,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
 import {SidebarModule} from 'primeng/sidebar';
 import { MessageService } from 'primeng/api';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { MessageService } from 'primeng/api';
     TableModule,
     SidebarModule
   ],
-  providers: [UserService,CookieService,MessageService],
+  providers: [UserService,CookieService,MessageService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

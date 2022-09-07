@@ -6,25 +6,25 @@
 <p-sidebar [(visible)]="display" *ngIf="user">
     <h2>Lead Information</h2>
         <label for="firstname"><h3>First Name</h3></label>
-        <input type="text" id="firstname" [(ngModel)]="user.firstName" style="width: 100%;" pInputText />
+        <input type="text" id="firstname" [(ngModel)]="user.firstName" class="input-style" pInputText />
 
         <label for="lastname"><h3>Last Name</h3></label>
-        <input type="text" id="lastname" [(ngModel)]="user.lastName" style="width: 100%;" pInputText />
+        <input type="text" id="lastname" [(ngModel)]="user.lastName" class="input-style" pInputText />
 
         <label for="country"><h3>Country</h3></label>
-        <input type="text" id="country" [(ngModel)]="user.country" style="width: 100%;" pInputText />
+        <input type="text" id="country" [(ngModel)]="user.country" class="input-style" pInputText />
 
         <label for="nationality"><h3>Nationality</h3></label>
-        <input type="text" id="nationality" [(ngModel)]="user.nationality" style="width: 100%;" pInputText />
+        <input type="text" id="nationality" [(ngModel)]="user.nationality" class="input-style" pInputText />
 
         <label for="nationality"><h3>Company</h3></label>
-        <input type="text" id="company" [(ngModel)]="user.company" style="width: 100%;" pInputText />
+        <input type="text" id="company" [(ngModel)]="user.company" class="input-style" pInputText />
 
         <label for="designation"><h3>Designation</h3></label>
-        <input type="text" id="designation" [(ngModel)]="user.designation" style="width: 100%;" pInputText />
+        <input type="text" id="designation" [(ngModel)]="user.designation" class="input-style" pInputText />
 
         <label for="work-exp"><h3>Work Experience</h3></label>
-        <input type="text" id="work-exp" [(ngModel)]="user.workExp" style="width: 100%;" pInputText />
+        <input type="text" id="work-exp" [(ngModel)]="user.workExp" class="input-style" pInputText />
 
         <label for="cv"><h3>CV</h3></label>
         <p-fileUpload #fubauto mode="basic" name="demo[]" url="./upload.php" accept="image/*" [auto]="true" chooseLabel="Choose File" id="cv"></p-fileUpload>
@@ -57,7 +57,7 @@
             </ng-template>
             <ng-template pTemplate="body" let-user>
                 <tr>
-                    <td><p-button type="text" (click)="getUser(user.lastName)" icon="pi pi-pencil"></p-button></td>
+                    <td><p-button type="text" (click)="getUser(user.username)" icon="pi pi-pencil"></p-button></td>
                     <td>{{ user.firstName }}</td>
                     <td>{{ user.lastName }}</td>
                     <td>{{ user.country }}</td>

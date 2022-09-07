@@ -5,7 +5,6 @@ import { LoginComponent } from '../login/login.component';
 import { CookieService } from 'ngx-cookie-service';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 
-
 interface Socials {
     name: string,
     code: string
@@ -18,15 +17,17 @@ interface Socials {
 })
 
 export class DashboardComponent implements OnInit {
+    // socials dropdown variables
     socials: Socials[];
-    selectedSocial: Socials | undefined;
+    selectedSocial: Socials;
+
+    // admin dashboard variables
     username: string;
     users!: User[];
     user!: User;
-    item: string;
     adminUser: string;
-    message: any;
-    login: LoginComponent;
+
+    // required sidebar variable
     display: boolean;
 
     constructor(private userService: UserService, private cookieValue: CookieService,) { 
@@ -47,16 +48,12 @@ export class DashboardComponent implements OnInit {
         });
     }
 
-    onSubmit(){
-        this.item = 'hello'
-    }
-
     receiveEvent(data: any){
         this.users.push(data);
     }
 
-    getUser(lastName: string){
-        const user = this.users.find(u => u.lastName === lastName);
+    getUser(username: string){
+        const user = this.users.find(u => u.username === username);
         if (user) {
             this.user = user;
             this.display = true;
@@ -66,6 +63,4 @@ export class DashboardComponent implements OnInit {
     close(){
         this.display = false;
     }
-
-
 }
