@@ -5,7 +5,6 @@ import { LoginComponent } from '../login/login.component';
 import { CookieService } from 'ngx-cookie-service';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 
-
 interface Socials {
     name: string,
     code: string

@@ -57,7 +57,6 @@ export class SidebarComponent implements OnInit {
       username: this.firstname.toLowerCase() + this.lastname,
       password: 'admin'
     }
-    console.log(this.user); 
     this.userEvent.emit(this.user);
   }
 
