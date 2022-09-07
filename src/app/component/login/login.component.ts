@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   firstName: string;
   lastName: string;
   error: string | undefined;
+  cardStyle: string;
   users: User[]
 
   constructor(private router:Router, private cookieService: CookieService, private userService: UserService){}
@@ -24,7 +25,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
-
     this.users.forEach(element => {
       if(this.username == element.username){
         if(this.password == element.password){
@@ -33,8 +33,6 @@ export class LoginComponent implements OnInit {
         }
       }
     });
-
     console.log(this.username);
-
   }
 }
